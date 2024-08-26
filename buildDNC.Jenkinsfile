@@ -1,6 +1,6 @@
 def dockerImage;
 
-denode('docker'){
+node('docker'){
 	stage('SCM'){
 		checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/kubagdynia/JenkinsDocker']]])
 	}
